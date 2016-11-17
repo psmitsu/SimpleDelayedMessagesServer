@@ -1,0 +1,11 @@
+{
+  "name": "simple_rabbit_server",
+  "version": "0.0.1",
+  "description": "Simple Server for working with Rabbit MQ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Daniil Eliseev",
+  "license": "ISC"
+}
