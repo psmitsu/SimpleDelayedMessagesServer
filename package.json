@@ -9,9 +9,9 @@
   "author": "Daniil Eliseev",
   "license": "ISC",
   "dependencies": {
-    "amqplib": "^0.5.1",
     "express": "^4.14.0",
     "morgan": "^1.7.0",
+    "rsmq": "^0.7.1",
     "wagner": "^0.6.4"
   }
 }

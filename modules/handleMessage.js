@@ -1,5 +1,16 @@
-module.exports = function(message, time) {
-  let key = Math.ceil( Math.random() * 1000);
-  console.log("Message " + message + " will be delivered in " + time);
-  return key;
+module.exports = function(message, time, handler) {
+  let p =  new Promise( (resolve, reject) => {
+    handler.rsmq_handler.sendMessage( {qname : handler.qname,
+        message : message,
+        delay : time}, (err, resp) => {
+          if (resp) {
+            resolve (resp); // message id
+          }
+          else {
+            reject(Error("Message was not send"));
+          }
+        });
+  });
+  
+  return p;
 }
