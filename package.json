@@ -1,11 +1,17 @@
 {
-  "name": "simple_rabbit_server",
+  "name": "simple_messaging_server",
   "version": "0.0.1",
-  "description": "Simple Server for working with Rabbit MQ",
+  "description": "Simple Server for working with queue of delayed messages",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Daniil Eliseev",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "amqplib": "^0.5.1",
+    "express": "^4.14.0",
+    "morgan": "^1.7.0",
+    "wagner": "^0.6.4"
+  }
 }
