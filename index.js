@@ -2,7 +2,7 @@ const express = require('express'),
       logger = require('morgan'),
       handleMessage = require('./modules/handleMessage.js'),
       deleteMessage = require('./modules/deleteMessage.js'),
-      rsmqPromise = require('./modules/establishRSMQ.js')('testQueue');
+      rsmqPromise = require('./modules/establishRSMQ.js')(process.argv[2]);
 
 rsmqPromise.then( (rsmq) => {
 
